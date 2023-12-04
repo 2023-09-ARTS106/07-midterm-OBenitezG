@@ -5,6 +5,7 @@ using UnityEngine;
 public class ValvePickUp : MonoBehaviour
 {
     Animator animator;
+    bool valvePickedUp = false;
 
     void Start()
     {
@@ -17,6 +18,12 @@ public class ValvePickUp : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
             animator.SetBool("PickUp", true);
+            valvePickedUp = true;
         }
+    }
+
+    public bool isValvePickedUp()
+    {
+        return valvePickedUp;
     }
 }
